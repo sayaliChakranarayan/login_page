@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container for the form -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <!-- Form for login -->
+        <form id="loginForm">
+            <!-- Username input field -->
+            <div class="form-group">
+                <label for="username">Username/Email:</label>
+                <input type="text" id="username" name="username" required>
+                <span id="usernameError" class="error"></span>
+            </div>
+
+            <!-- Password input field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+
+            <!-- Remember Me checkbox -->
+            <div class="form-group">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+
+            <!-- Loading spinner (hidden by default) -->
+            <div id="loadingSpinner" class="spinner" style="display: none;">Loading...</div>
+
+            <!-- API response display -->
+            <p id="apiResponse" class="response"></p>
+        </form>
+    </div>
+    <!-- Link to external JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
